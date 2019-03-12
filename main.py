@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 import functions
 
 app = Flask(__name__)
@@ -11,11 +11,16 @@ def boards():
     return render_template('boards.html', board_data=board_data)
 
 
+@app.route("/data")
+def get_all_data():
+    ''' this is a one-pager which shows all the boards and cards '''
+    board_data = functions.list_boards()
+    return jsonify(board_data)
+
+
 def main():
     app.run(debug=True)
 
 
 if __name__ == '__main__':
     main()
-
-
