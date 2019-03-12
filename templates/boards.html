@@ -1,19 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>ProMan</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ProMan</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="{{ url_for('static', filename='js/data_handler.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='js/dom.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
 
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
-        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-        <script src="{{ url_for('static', filename='js/data_handler.js') }}" defer></script>
-        <script src="{{ url_for('static', filename='js/dom.js') }}" defer></script>
-        <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
-    </head>
-    <body>
-        <h1>ProMan</h1>
-        <div id="boards">Boards are loading...</div>
-    </body>
+</head>
+<body id="container">
+<h1>ProMan</h1>
+
+<template id="proman_board">
+    <div class="container">
+        <div class="row border border-dark">
+            <div class="col-8" id="board_name">col8</div>
+            <div class="col-4" id="add_new_card_button">col8</div>
+        </div>
+        <div class="row">
+            <div class="col border border-dark" id="new">col</div>
+            <div class="col border border-dark" id="in_progress">col</div>
+            <div class="col border border-dark" id="testing">col</div>
+            <div class="col border border-dark" id="done">col</div>
+        </div>
+    </div>
+</template>
+
+
+<template id="proman_card">
+    <div class="container_card">
+        <div class="card" id="cardTemplate"></div>
+    </div>
+</template>
+
+
+
+</body>
 </html>

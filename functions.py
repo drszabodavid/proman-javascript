@@ -10,3 +10,13 @@ def list_boards(cursor):
                    )
     board_data = cursor.fetchall()
     return board_data
+
+
+@database_common.connection_handler
+def list_cards(cursor):
+    cursor.execute("""
+                   SELECT * FROM cards
+                                      """,
+                   )
+    card_data = cursor.fetchall()
+    return card_data

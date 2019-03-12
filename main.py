@@ -15,6 +15,7 @@ def boards():
 def get_all_data():
     ''' this is a one-pager which shows all the boards and cards '''
     board_data = functions.list_boards()
+    card_data = functions.list_cards()
     return jsonify(board_data)
 
 
