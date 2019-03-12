@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+import functions
 
 app = Flask(__name__)
 
@@ -6,7 +7,8 @@ app = Flask(__name__)
 @app.route("/")
 def boards():
     ''' this is a one-pager which shows all the boards and cards '''
-    return render_template('boards.html')
+    board_data = functions.list_boards()
+    return render_template('boards.html', board_data=board_data)
 
 
 def main():
@@ -15,3 +17,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
