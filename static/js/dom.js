@@ -48,8 +48,8 @@ let dom = {
         }
         for (let i = 0; i < cards.length; i++) {
             temporaryCard = document.getElementById("cardTemplate");
-            temporaryCard.id = "cards[`${i}`].id";
-            temporaryCard.innerHTML = "cards[`${i}`].title"
+            temporaryCard.id = cards[`${i}`].id;
+            temporaryCard.innerHTML = cards[`${i}`].title
         }
     }
     ,
