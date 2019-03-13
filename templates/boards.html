@@ -12,22 +12,25 @@
     <script src="{{ url_for('static', filename='js/data_handler.js') }}" defer></script>
     <script src="{{ url_for('static', filename='js/dom.js') }}" defer></script>
     <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
-
 </head>
 <body id="container">
 <h1>ProMan</h1>
 
 <template id="proman_board">
     <div class="container">
+        <button id="collapsible" data-target="#demo" data-toggle="collapsible"  class="collapsible">Open Section 1</button>
+        <button id="delete" class="delete">Open Section 1</button>
+
         <div class="row border border-dark">
-            <div class="col-8" id="board_name">col8</div>
+            <div class="col-8" id="board_name"></div>
             <div class="col-4" id="add_new_card_button">col8</div>
         </div>
-        <div class="row">
-            <div class="col border border-dark" id="new">col</div>
-            <div class="col border border-dark" id="in_progress">col</div>
-            <div class="col border border-dark" id="testing">col</div>
-            <div class="col border border-dark" id="done">col</div>
+        <div class="row collapsible" id="#demo">
+
+            <div class="col border-left border-bottom" id="new">col</div>
+            <div class="col border-bottom" id="in_progress">col</div>
+            <div class="col border-bottom" id="testing">col</div>
+            <div class="col border-right border-bottom " id="done">col</div>
         </div>
     </div>
 </template>
@@ -38,7 +41,6 @@
         <div class="card" id="cardTemplate"></div>
     </div>
 </template>
-
 
 
 </body>

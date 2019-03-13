@@ -11,7 +11,7 @@ let dom = {
         const createBoard = function (board_name) {
             const template = document.querySelector("#proman_board");
             const clone = document.importNode(template.content, true);
-            clone.querySelector('#board_name').textContent = board_name;
+            clone.querySelector('#board_name').textContent = board_name ;
             return clone;
 
         };
@@ -22,9 +22,36 @@ let dom = {
         }
         for (let i = 0; i < boards.length; i++) {
             temporaryBoard = document.getElementById("board_name");
-            temporaryBoard.id = "board_name `${i}";
+            temporaryBoard.id = "board" + boards[`${i}`].id;
             temporaryBoard.innerHTML = boards[`${i}`].title
         }
+
+        let container = document.querySelectorAll('.container');
+        console.log(container);
+
+
+        let boardid = document.querySelector(".collapsible");
+        console.log(boardid)
+
+
+            boardid.addEventListener("click", function () {
+                this.classList.toggle("active");
+                let content = document.querySelectorAll('.col');
+                for (let i = 0; i < content.length; i++) {
+
+                    if (content[i].style.display === "block") {
+                        content[i].style.display = "none";
+                    } else {
+                        content[i].style.display = "block";
+                    }
+                }
+
+            });
+
+
+       $(".delete").click(function () {
+    $(this).parent().closest('div').remove();
+});
 
 
     }
@@ -51,7 +78,10 @@ let dom = {
             }
         }
 
+
         return elementToExtend.lastChild;
     }
-    // here comes more features
+    ,
+
+
 };

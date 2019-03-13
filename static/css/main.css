@@ -5,3 +5,9 @@
 .container {
     padding: 20px;
 }
+
+
+.col{
+    height: 400px;
+    border-style: inset;
+}
