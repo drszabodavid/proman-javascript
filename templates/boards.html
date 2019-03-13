@@ -26,8 +26,8 @@
 
             </div>
         </div>
-        <div class="row" id="">
-            <div class="col border border-dark" id="new">New</div>
+        <div class="row" ondragstart="dragStart(event)" ondragover="allowDrop(event)" ondrop="drop(event)">
+            <div class="col border border-dark" id="new" ondrop="drop(event)">New</div>
             <div class="col border border-dark" id="in_progress">In Progress</div>
             <div class="col border border-dark" id="testing">Testing</div>
             <div class="col border border-dark" id="done">Done</div>
@@ -37,8 +37,9 @@
 
 
 <template id="proman_card">
-    <div class="container_card">
-        <div class="card" id="cardTemplate"></div>
+    <div class="container_card" id="container">
+        <div class="holder"></div>
+            <div class="card" id="cardTemplate" draggable="true" ondragstart="dragStart(event)"></div>
     </div>
 </template>
 
