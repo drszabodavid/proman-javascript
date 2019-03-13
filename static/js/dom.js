@@ -28,10 +28,10 @@ let dom = {
     }
     ,
     showCards: function (cards) {
-        let boardData = document.getElementsByClassName("boardElement");
+        let boardData = document.getElementsByClassName("board");
         for (let data  in boardData) {
             console.log(boardData);
-            console.log(data[0]);
+            console.log(data);
         }
 
         const createCard = function (card_name) {
