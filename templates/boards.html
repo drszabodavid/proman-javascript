@@ -9,14 +9,39 @@
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="{{ url_for('static', filename='js/data_handler.js') }}" defer></script>
     <script src="{{ url_for('static', filename='js/dom.js') }}" defer></script>
     <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
-
 </head>
+
+
 <body id="container">
 <h1>ProMan</h1>
 
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#add-board">+ Add new board</button>
+
+<div id="add-board" class="modal fade" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="add-new-board-title">Add new public board</h4>
+            </div>
+            <div class="modal-body">
+                <form action="{{ url_for('boards') }}" class="add-new" id="add-new-board" method="post">
+                    <p><textarea id="title" name="title" rows="1" required placeholder="New Boards Name"></textarea></p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Save new board</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 <template id="proman_board">
     <div class="container">
         <div class="row border border-dark">

@@ -20,3 +20,10 @@ def list_cards(cursor):
                    )
     card_data = cursor.fetchall()
     return card_data
+
+@database_common.connection_handler
+def add_new_board(cursor, title, is_active):
+    cursor.execute("""
+                    INSERT INTO boards (title, is_active)
+                    VALUES (%(title)s, 1) 
+                    """, ({'title':title, 'is_active': 1}))
