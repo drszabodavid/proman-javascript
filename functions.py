@@ -6,6 +6,7 @@ from psycopg2 import sql
 def list_boards(cursor):
     cursor.execute("""
                    SELECT * FROM boards
+                   ORDER BY id ASC; 
                                       """,
                    )
     board_data = cursor.fetchall()
@@ -16,6 +17,7 @@ def list_boards(cursor):
 def list_cards(cursor):
     cursor.execute("""
                    SELECT * FROM cards
+                   
                                       """,
                    )
     card_data = cursor.fetchall()
