@@ -34,6 +34,7 @@ let dom = {
                 clone.querySelector('#cardTemplate').textContent = card_name;
                 return clone;
             };
+
             for (let i = 0; i < cards.length; i++) {
                 const cardContent = createCard();
                 if (cards[`${i}`].status_id === 1) {

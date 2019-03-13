@@ -24,8 +24,8 @@ def list_cards(cursor):
     return card_data
 
 @database_common.connection_handler
-def add_new_board(cursor, title, is_active):
+def add_new_board(cursor, title):
     cursor.execute("""
-                    INSERT INTO boards (title, is_active)
-                    VALUES (%(title)s, 1) 
-                    """, ({'title':title, 'is_active': 1}))
+                    INSERT INTO boards (title)
+                    VALUES (%(title)s) 
+                    """, ({'title':title}))
