@@ -43,6 +43,14 @@ let dataHandler = {
     getCard: function (cardId, callback) {
         // the card is retrieved and then the callback function is called with the card
     },
+    getCardsData: function (callback) {
+        // the card is retrieved and then the callback function is called with the card
+        fetch('/card-data')
+            .then((response) => response.json())  // parse JSON format into JS object
+            .then(function (cards) {
+                callback(cards)
+            });
+    },
     createNewBoard: function (boardTitle, callback) {
         // creates new board, saves it and calls the callback function with its data
     },

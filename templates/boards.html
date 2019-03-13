@@ -43,16 +43,18 @@
     </div>
 </div>
 <template id="proman_board">
-    <div class="container">
+    <div class="container boardElement">
         <div class="row border border-dark">
             <div class="col-8" id="board_name">col8</div>
-            <div class="col-4" id="add_new_card_button">col8</div>
+            <div class="col-4" id="add_new_card_button">
+                <button class="button">Add new card</button>
+            </div>
         </div>
-        <div class="row">
-            <div class="col border border-dark" id="new">col</div>
-            <div class="col border border-dark" id="in_progress">col</div>
-            <div class="col border border-dark" id="testing">col</div>
-            <div class="col border border-dark" id="done">col</div>
+        <div class="row" id="">
+            <div class="col border border-dark" id="new">New</div>
+            <div class="col border border-dark" id="in_progress">In Progress</div>
+            <div class="col border border-dark" id="testing">Testing</div>
+            <div class="col border border-dark" id="done">Done</div>
         </div>
     </div>
 </template>
@@ -63,7 +65,6 @@
         <div class="card" id="cardTemplate"></div>
     </div>
 </template>
-
 
 
 </body>
