@@ -12,13 +12,15 @@
     text-align: left;
     padding-top: 10px;
     color: white;
+}
 
-
+.col {
+    -webkit-box-shadow: 0px 5px 5px 0px #ffffff;
 }
 
 h1 {
     font-size: 30px;
-    color: #fff;
+    color: white;
     text-transform: uppercase;
     font-weight: 300;
     text-align: center;
@@ -28,6 +30,7 @@ h1 {
 table {
     width: 100%;
     table-layout: fixed;
+    box-shadow: 10px 10px grey;
 }
 
 .tbl-header {
@@ -46,8 +49,8 @@ table {
     text-align: center;
     font-weight: 500;
     font-size: 15px;
-    color: whitesmoke;
-    background-color: #5bc0de;
+    color: black;
+    background-color: white;
     text-transform: uppercase;
 }
 
@@ -64,14 +67,14 @@ table {
 
 /* demo styles */
 
-.btn {
+.button {
     font-family: 'Roboto', sans-serif;
 }
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
 body {
-    background: -webkit-linear-gradient(left, #25c481, #25b7c4);
-    background: linear-gradient(to right, #25c481, #25b7c4);
+    background: -webkit-linear-gradient(left, darkred, maroon);
+    background: linear-gradient(to right, maroon, darkred);
     font-family: 'Roboto', sans-serif;
 }
 
