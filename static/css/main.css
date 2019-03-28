@@ -8,7 +8,7 @@
 
 .col-8 {
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: 22px;
     text-align: left;
     padding-top: 10px;
     color: white;
@@ -18,7 +18,18 @@
     -webkit-box-shadow: 0px 5px 5px 0px #ffffff;
 }
 
+
 h1 {
+    font-size: 1000px;
+    color: lightsalmon;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+btn-style {
     font-size: 30px;
     color: white;
     text-transform: uppercase;
@@ -26,6 +37,7 @@ h1 {
     text-align: center;
     margin-bottom: 15px;
 }
+
 
 table {
     width: 100%;
@@ -40,26 +52,27 @@ table {
 .tbl-content {
     height: 300px;
     overflow-x: auto;
-    margin-top: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: 2px;
+    border: 4px solid black;
 }
 
 .card {
     padding: 20px 15px;
     text-align: center;
-    font-weight: 500;
-    font-size: 15px;
+    font-weight: 800;
+    font-size: 18px;
     color: black;
-    background-color: white;
+    background-color: goldenrod;
     text-transform: uppercase;
+    border: 1px solid black;
 }
 
 #new, #in_progress, #testing, #done {
     padding: 15px;
     text-align: center;
     vertical-align: middle;
-    font-weight: 300;
-    font-size: 15px;
+    font-weight: 900;
+    font-size: 20px;
     color: white;
     border-bottom: solid 20px rgba(255, 255, 255, 0.1);
 }
@@ -115,13 +128,13 @@ section {
 /* for custom scrollbar for webkit browser*/
 
 ::-webkit-scrollbar {
-    width: 6px;
+    width: 13px;
 }
 
 ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 0 6px black;
 }
 
 ::-webkit-scrollbar-thumb {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 0 13px black;
 }

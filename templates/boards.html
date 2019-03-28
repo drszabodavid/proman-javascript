@@ -21,7 +21,7 @@
 <body id="container">
 <h1>ProMan</h1>
 
-<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#add-board">+ Add new board</button>
+<button type="button" class="btn btn-warning bg-maroon" data-toggle="modal" data-target="#add-board">+ Add new board</button>
 
 <div id="add-board" class="modal fade" role="dialog">
     <div class="modal-dialog" role="document">
@@ -34,7 +34,7 @@
                     <p><textarea id="title" name="title" rows="1" required placeholder="New Boards Name"></textarea></p>
             </div>
             <div class="modal-footer">
-                <button type="submit" class="btn btn-primary">Save new board</button>
+                <button type="submit" class="btn btn-primary bg-warning">Save new board</button>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                 </form>
             </div>
@@ -55,7 +55,7 @@
                     <p><textarea id="status_id" name="status_id" rows="1" required placeholder="Status"></textarea></p>
             </div>
             <div class="modal-footer">
-                <button type="submit" class="btn btn-primary">Save new card</button>
+                <button type="submit" class="btn btn-primary bg-warning">Save new card</button>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                 </form>
             </div>
@@ -70,7 +70,7 @@
         <div class="tbl-header row border border-dark">
             <div class="col-8" id="board_name">col8</div>
             <div class="col-4" id="add_new_card_button">
-                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#add-card">Add new card</button>
+                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#add-card">Add new card</button>
             </div>
         </div>
         <div class="row tbl-content" ondragstart="dragStart(event)" ondragover="allowDrop(event)" ondrop="drop(event)">
