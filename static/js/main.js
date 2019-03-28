@@ -12,7 +12,7 @@ function init() {
 init();
 
 
-var id;
+var id
 
 function allowDrop(ev) {
     ev.preventDefault();
