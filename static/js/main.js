@@ -5,14 +5,11 @@ function init() {
     // loads the boards to the screen
     dom.loadBoards();
     dom.loadCards();
-
+    dom.collapseBoards();
 
 }
 
 init();
-
-
-var id
 
 function allowDrop(ev) {
     ev.preventDefault();

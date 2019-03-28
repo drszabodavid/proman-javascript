@@ -3,6 +3,8 @@ let dom = {
         loadBoards: function () {
             // retrieves boards and makes showBoards called
             dataHandler.getBoards(this.showBoards)
+            dataHandler.getBoards(this.collapseBoards)
+
         },
         showBoards: function (boards) {
             const createBoard = function (board_name) {
@@ -77,7 +79,32 @@ let dom = {
 
                 return elementToExtend.lastChild;
             }
+            ,
+    collapseBoards: function (boards) {
+            let table = document.querySelectorAll('.incollapse');
+            let row = document.querySelectorAll('.outcollapse');
+            for(let element of table ){
+                element.addEventListener('click', function () {
+                    let elementsibling = this.parentElement.parentElement.nextSibling.nextSibling;
+                    console.log(elementsibling);
+                    elementsibling.style.display="none";
 
-// here comes more features
+                });
+
+
     }
+
+            for(let elem of row){
+                elem.addEventListener('click', function () {
+                    let otherelem = this.parentElement.parentElement.nextSibling.nextSibling;
+                    otherelem.style.display='';
+
+
+            });
+            }
+
+    }
+}
 ;
+
+
