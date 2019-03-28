@@ -25,5 +25,5 @@ function dragStart(ev) {
 
 
 function drop(ev) {
-    ev.target.append(document.getElementById(id))
+    ev.tartget.append(document.getElementById(id));
 }
