@@ -6,6 +6,7 @@ function init() {
     dom.loadBoards();
     dom.loadCards();
     dom.loadCards();
+    dom.deleteBoards();
 
 
 }
